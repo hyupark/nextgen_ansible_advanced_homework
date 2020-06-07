@@ -7,8 +7,9 @@
       msg: OpenStack servers
 
   - name: Curl website
-    debug:
-      msg: Curl website
+    get_url:
+      url: http://example.com/path/file.conf
+      register: webpage.results
 
   - name: Fail if 'Ansible has done its job' is not in the page content
     fail:
