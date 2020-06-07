@@ -2,7 +2,12 @@
   gather_facts: false
   tasks:
   - name: OpenStack servers
+    debug:
+      msg: OpenStack servers
+
   - name: Curl website
+    debug:
+      msg: Curl website
 
   - name: Fail if 'Ansible has done its job' is not in the page content
     fail:
